@@ -4,51 +4,57 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'Karla';
     margin: 0 70px;
 }
 h1{
     justify-content: flex-start;
-    font-size: 30px;
-    text-transform: uppercase;
 }
-h2, p{
-    margin-top: 1%;
-    font-size: 20px;
+h2, h3, p{
+    font-size: 18px;
     font-weight: 400;
 }
 span{
     color: rgb(165, 165,165);
 }
-
 a{
     text-decoration: none;
     color:rgb(50, 58, 69);
 }
+a:hover{
+    text-decoration: underline;
+}
 img{
     width: 100%;
 }
-
+a img:hover{
+    opacity: 0.5;
+    /* ================================Header====================== */
+}
 header{
  display: flex;
- justify-content: flex-end;
  justify-content: space-between;
- margin: 3% 0;
+ margin: 5% 0;
+ color:rgb(50, 58, 69);
+ align-items:baseline;
+}
+h1 a{
+    font-weight:800;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 ul{
     display: flex;
     list-style: none;
-    gap: 30px;   
+    gap: 30px;  
 }
-li{
-    justify-content: end;
-    font-size: 25px;
+li a{
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 600;
 }
-
 /* ==================section================== */
-
 section{
     display: grid;
     gap: 20px;
@@ -61,34 +67,40 @@ section{
 .product__name{
     display: flex;
     justify-content: space-between;
-    
 }
-h2{
+h2 a{
     justify-content: flex-start;
+    font-weight: 400;
 }
 p{
-    display: flex;
     align-items:flex-start;
     justify-content: flex-end;
 }
-
 /* ==============footer======== */
 footer{
     margin-top: 7%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 6rem;
-
 }
 footer div:nth-of-type(1){
  grid-column: 1/2;
 }
-footer p, a  {
-    line-height: 1.5em;
+footer p, a:not(section a, header a){
+    line-height: 1.4em;
+    justify-content: flex-start;
+    color:rgb(50, 58, 69);
+    font-weight:300;
+    font-size: 15px;
+}
+footer h3{
+    margin-bottom: 20%;
 }
 .footer-end{
-  grid-column: 1/3;
- 
+ grid-column: 1/4;
+ font-size: 15px;
+ color: rgb(165, 165,165);
+ padding-bottom: 5%;
 }
 
 
